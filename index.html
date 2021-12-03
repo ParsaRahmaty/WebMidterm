@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gender Predictor</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="bg">
+    <div id="centerDiv">
+        <div id="leftSide">
+            <h1 class="text">Mr. or Ms.?</h1><br>
+            <form method="get" id="inputForm">
+                <label class="text" for="name">Name</label>
+                <input type="text" id="name" name="name"><br><br><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br><br>
+                <input type="submit">
+            </form>
+        </div>
+        <div id="rightSide">
+            <div id="receivedResults">
+                <h1 class="text">Predictions:</h1>
+                <p id="gender" class="text"></p>
+                <p id="probability" class="text"></p>
+            </div>
+            <div id="savedResults">
+                <h1 class="text">Saved Answer:</h1>
+                <p id="savedGender" class="text"></p><br>
+                <button onclick="clearButton()">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>checkInputBox();</script>
+<script>addListener()</script>
+</body>
+</html>
